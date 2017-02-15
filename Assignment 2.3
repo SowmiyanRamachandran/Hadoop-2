@@ -1,0 +1,42 @@
+Assignment 2.3
+
+All components of Hadoop 1.x :
+
+Hadoop 1.x MapReduce is also know as “Classic MapReduce” as it was developedby following Google’s MapReduce Algorithm Tech Paper.
+Hadoop Common Module is a Hadoop Base API (A Jar file) for all Hadoop Components. All other components works on top of this module.
+HDFS stands for Hadoop Distributed File System. It is also know as HDFS V1 as it is part of Hadoop 1.x. It is used as a Distributed
+Storage System in Hadoop Architecture.
+
+MapReduce is a Batch Processing or Distributed Data Processing Module. It is built by following Google’s MapReduce Algorithm.It is also
+know as “MR V1” or “Classic MapReduce” as it is part of Hadoop 1.x.
+Remaining all Hadoop Ecosystem components work on top of these two major components: HDFS and MapReduce.
+
+Hadoop 1.x Major Components components are: HDFS and MapReduce. They are also know as “Two Pillars” of Hadoop 1.x.
+
+HDFS:
+HDFS is a Hadoop Distributed FileSystem, where our BigData is stored using Commodity Hardware. It is designed to work with Large DataSets
+with default block size is 64MB (We can change it as per our Project requirements).
+
+HDFS component is again divided into two sub-components:
+1.Name Node:
+Name Node is placed in Master Node. It used to store Meta Data about Data Nodes like “How many blocks are stored in Data Nodes,
+Which Data Nodes have data, Slave Node Details, Data Nodes locations, timestamps etc” .
+
+2.Data Node:
+Data Nodes are places in Slave Nodes. It is used to store our Application Actual Data. It stores data in Data Slots of size 64MB by default.
+
+MapReduce:
+MapReduce is a Distributed Data Processing or Batch Processing Programming Model. Like HDFS, MapReduce component also uses Commodity
+Hardware to process “High Volume of Variety of Data at High Velocity Rate” in a reliable and fault-tolerant manner.
+
+1.Job Tracker:
+Job Tracker is used to assign MapReduce Tasks to Task Trackers in the Cluster of Nodes. Sometimes, it reassigns same tasks to other
+Task Trackers as previous Task Trackers are failed or shutdown scenarios.
+Job Tracker maintains all the Task Trackers status like Up/running, Failed, Recovered etc.
+
+2.Task Tracker:
+Task Tracker executes the Tasks which are assigned by Job Tracker and sends the status of those tasks to Job Tracker.
+
+Hadoop 1.x Architecture has lot of limitations and drawbacks. So that Hadoop Community has evaluated and redesigned this Architecture into Hadoop 2.x Architecture.
+Hadoop 2.x Architecture is completely different and resolved all Hadoop 1.x Architecture’s limitations and drawbacks.
+
